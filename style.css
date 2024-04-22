@@ -110,5 +110,45 @@ main img{
   margin-bottom: 3rem;
   
 }
-
 /* final estilização main */
+/* Estilização barra lateral */
+aside{
+  width: 80%;
+  margin: 3.4rem auto;  
+}
+
+aside h2{
+  margin-bottom: 3.2rem;
+}
+
+section{
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.description h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.description p{
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+/* final estilização barra lateral */
+
+/* Estilização footer */
+footer{
+  background-color: var(--color-bg-header-footer-buttons);
+  padding: 2.65rem 1.6rem;
+}
+
+footer p{
+  text-align: center;
+  color: var(--color-bg-page);
+  font-weight: 600;
+  line-height: 2rem;
+}
