@@ -30,7 +30,7 @@ html, body{
 
 }
 
-body{
+#container{
   display: grid;
   height: 100vh;
 
@@ -80,7 +80,7 @@ nav input::placeholder{
   
 }
 
-#container{
+main{
   padding: 0 2.8rem;
 }
 main h1{
@@ -104,6 +104,10 @@ main p{
 }
 
 /* Estilização aside */
+
+aside{
+  padding: 0 2.8rem;
+}
 
 aside h2{
   margin: 3.2rem 0;
@@ -135,4 +139,50 @@ footer{
   color: var(--color-bg-page);
   font-weight: 600;
   line-height: 2rem;
+}
+
+
+@media(min-width: 768px){
+  #container{
+    /* width: 80%; */
+    margin: 0 auto;
+
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "img aside"
+    "main aside"
+    "footer footer";
+
+    column-gap: 3.4rem;
+
+    
+  }
+
+  header{
+    grid-area: header;
+    
+  }
+
+  #cat-main{
+    grid-area: img;
+  }
+
+  aside{
+    grid-area: aside;
+  }
+
+  main{
+    grid-area: main;
+    /* overflow-y: scroll; */
+  }
+
+  footer{
+    grid-area: footer;
+  }
+  
+  nav{
+    width: 85%;
+  }
 }
