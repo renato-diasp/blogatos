@@ -1,50 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Configurações gerais */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
-:root{
+:root {
   font-size: 62.5%;
 }
 
-html, body{
+html,
+body {
   font-size: 1.6rem;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
 
   /* variáveis de cores */
-  
-  --color-bg-header-footer-buttons: #065E7C;
+
+  --color-bg-header-footer-buttons: #065e7c;
   --color-bg-input: #387e96;
   --color-bg-page: #fff;
   --color-titles: #202024;
   --color-text: #121214;
-
-  
 }
 
-#container{
+#container {
   display: grid;
-  height: 100vh;
-
-  grid-template-rows: repeat(3, max-content 1fr 1fr);
 }
 
 /* Estilização header */
-header{
+header {
   background-color: var(--color-bg-header-footer-buttons);
   padding: 1.6rem 2.8rem;
 }
 
-nav{
+nav {
   margin: 0 auto;
   display: flex;
   gap: 2.5rem;
@@ -52,17 +47,17 @@ nav{
   align-items: center;
 }
 
-nav img:first-child{
-  padding: .9rem;
+nav img:first-child {
+  padding: 0.9rem;
   background-color: var(--color-bg-page);
   border-radius: 50%;
 }
 
-nav input{
+nav input {
   flex: 1;
   padding: 1.2rem;
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: var(--color-bg-input);
   line-height: 2rem;
   font-family: "Mulish", sans-serif;
@@ -70,28 +65,27 @@ nav input{
   font-weight: 600;
 }
 
-nav input::placeholder{
+nav input::placeholder {
   color: var(--color-bg-page);
 }
-/* estilização main */ 
+/* estilização main */
 
-#cat-main{
+#cat-main {
   width: 100%;
   margin-bottom: 3rem;
-  
 }
 
-main{
+main {
   padding: 0 2.8rem;
 }
-main h1{
+main h1 {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.84rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
-main img{
+main img {
   padding: 1.2rem;
   background-color: var(--color-bg-header-footer-buttons);
   border-radius: 50%;
@@ -99,46 +93,46 @@ main img{
   margin-bottom: 4.3rem;
 }
 
-main p{
+main p {
   font-weight: 400;
   line-height: 2.5rem;
 }
 
 /* Estilização aside */
 
-aside{
+aside {
   padding: 0 2.8rem;
 }
 
-aside h2{
+aside h2 {
   margin: 3.2rem 0;
 }
 
-.card{
+.card {
   display: flex;
   column-gap: 1.6rem;
   margin-bottom: 3.2rem;
 }
 
-.card img{
+.card img {
   width: fit-content;
   aspect-ratio: 16/9;
 }
 
-.card h3{
+.card h3 {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.9rem;
 }
 
-.card p{
+.card p {
   font-size: 1.4rem;
   line-height: 2.25rem;
 }
 
 /* Estilização footer */
 
-footer{
+footer {
   padding: 2.5rem 1.6rem;
   background-color: var(--color-bg-header-footer-buttons);
   text-align: center;
@@ -147,52 +141,44 @@ footer{
   line-height: 2rem;
 }
 
-
-@media(min-width: 768px){
-  #container{
-    
-    grid-template-rows: repeat(4, 1fr);
+@media (min-width: 768px) {
+  #container {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:     
-    "img aside"
-    "main aside";
+    grid-template-areas:
+      "img aside"
+      "main aside";
     column-gap: 3.4rem;
 
     width: 85%;
-    margin: 0 auto;   
-
+    margin: 0 auto;
   }
 
- 
-
-  #cat-main{
+  #cat-main {
     grid-area: img;
     margin-top: 3.2rem;
     padding: 0 2.8rem;
   }
 
-  aside{
+  aside {
     grid-area: aside;
   }
 
-  main{
+  main {
     grid-area: main;
   }
 
-  
-  
-  nav{
+  nav {
     width: 85%;
     margin: 0 auto;
   }
 
-  main > div{
+  main > div {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  footer{
+  footer {
     margin-top: 4rem;
-    
   }
 }
