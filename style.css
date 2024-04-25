@@ -28,6 +28,7 @@ html, body{
   --color-titles: #202024;
   --color-text: #121214;
 
+  
 }
 
 #container{
@@ -119,6 +120,11 @@ aside h2{
   margin-bottom: 3.2rem;
 }
 
+.card img{
+  width: fit-content;
+  aspect-ratio: 16/9;
+}
+
 .card h3{
   font-weight: 700;
   font-size: 1.8rem;
@@ -144,29 +150,25 @@ footer{
 
 @media(min-width: 768px){
   #container{
-    /* width: 80%; */
-    margin: 0 auto;
-
+    
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "header header"
+    grid-template-areas:     
     "img aside"
-    "main aside"
-    "footer footer";
-
+    "main aside";
     column-gap: 3.4rem;
 
-    
+    width: 85%;
+    margin: 0 auto;   
+
   }
 
-  header{
-    grid-area: header;
-    
-  }
+ 
 
   #cat-main{
     grid-area: img;
+    margin-top: 3.2rem;
+    padding: 0 2.8rem;
   }
 
   aside{
@@ -175,14 +177,22 @@ footer{
 
   main{
     grid-area: main;
-    /* overflow-y: scroll; */
   }
 
-  footer{
-    grid-area: footer;
-  }
+  
   
   nav{
     width: 85%;
+    margin: 0 auto;
+  }
+
+  main > div{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer{
+    margin-top: 4rem;
+    
   }
 }
