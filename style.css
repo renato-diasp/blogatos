@@ -73,10 +73,14 @@ nav input::placeholder {
 #cat-main {
   width: 100%;
   margin-bottom: 3rem;
+  animation-name: slide-right;
+    animation-duration: 1s;
 }
 
 main {
   padding: 0 2.8rem;
+  animation-name: slide-right;
+  animation-duration: 1s;
 }
 main h1 {
   font-weight: 700;
@@ -102,6 +106,8 @@ main p {
 
 aside {
   padding: 0 2.8rem;
+  animation-name: slide-left;
+  animation-duration: 1s;
 }
 
 aside h2 {
