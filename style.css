@@ -141,6 +141,27 @@ footer {
   line-height: 2rem;
 }
 
+/* animation */
+
+@keyframes slide-right{
+  from{
+    transform: translateX(-50vw);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left{
+  from{
+    transform: translateX(+50vw);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+
+/* Telas maiores */
+
 @media (min-width: 768px) {
   #container {
     grid-template-columns: 1fr 1fr;
@@ -157,14 +178,22 @@ footer {
     grid-area: img;
     margin-top: 3.2rem;
     padding: 0 2.8rem;
+    animation-name: slide-right;
+    animation-duration: 1s;
   }
 
   aside {
     grid-area: aside;
+    animation-name: slide-left;
+    animation-duration: 1s;
+    
   }
 
   main {
     grid-area: main;
+    animation-name: slide-right;
+    animation-duration: 1s;
+    
   }
 
   nav {
@@ -176,9 +205,27 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
   }
 
   footer {
     margin-top: 4rem;
   }
+
+  @keyframes slide-right{
+    from{
+      transform: translateX(-50vw);
+    }to{
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-left{
+    from{
+      transform: translateX(+50vw);
+    }to{
+      transform: translateX(0);
+    }
+  }
+
 }
